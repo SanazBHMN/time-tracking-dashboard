@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  --main-background-color: hsl(226, 43%, 10%);
+  --work-color: hsl(15, 100%, 70%);
+  --play-color: hsl(195, 74%, 62%);
+  --study-color: hsl(348, 100%, 68%);
+  --exercise-color: hsl(145, 58%, 55%);
+  --social-color: hsl(264, 64%, 52%);
+  --selfcare-color: hsl(43, 84%, 65%);
+  --text-color: white;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  background-color: var(--main-background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 70%;
+  border: 1px solid red;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-gap: 1.3rem;
+}
+
+div[class$="-card"] {
+  border: 4px solid yellow;
+}
