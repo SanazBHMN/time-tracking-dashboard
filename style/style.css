@@ -13,7 +13,7 @@
   --text-color: white;
   --secondary-text-color: hsl(236, 100%, 87%);
   --radius: 15px;
-  --padding: 0.9rem;
+  --padding: 1rem;
 }
 
 /* Global Styling */
@@ -61,6 +61,22 @@ body {
 
 img[src$=".svg"] {
   margin-right: 15px;
+}
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+.current {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.previous {
+    color: var(--secondary-text-color);
+    margin-top: 0;
 }
 
 div[class$="-card"] {
