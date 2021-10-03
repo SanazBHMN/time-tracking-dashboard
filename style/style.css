@@ -11,7 +11,9 @@
   --social-color: hsl(264, 64%, 52%);
   --selfcare-color: hsl(43, 84%, 65%);
   --text-color: white;
+  --secondary-text-color: hsl(236, 100%, 87%);
   --radius: 15px;
+  --padding: 0.9rem;
 }
 
 /* Global Styling */
@@ -54,7 +56,7 @@ body {
   background-color: var(--primary-background-color);
   border-radius: var(--radius);
   margin-top: -10px;
-  padding: 0.7rem;
+  padding: var(--padding);
 }
 
 img[src$=".svg"] {
@@ -83,8 +85,13 @@ div[class$="-card"] {
 }
 
 .profile.top-portion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
   background-color: var(--profile-color);
   border-radius: var(--radius);
+  padding: var(--padding);
 }
 
 .profile-card img {
@@ -92,6 +99,25 @@ div[class$="-card"] {
   height: 50px;
   border-radius: 50%;
   border: 2px solid white;
+}
+
+.profile-info small {
+  color: var(--secondary-text-color);
+}
+
+.profile-info h3 {
+  font-weight: 300;
+  font-size: 2.5em;
+  margin-top: 3px;
+}
+
+.card-info.profile-info p {
+  color: var(--secondary-text-color);
+}
+
+.card-info.profile-info p:hover {
+  cursor: pointer;
+  color: var(--text-color);
 }
 
 .work-card .top-portion {
