@@ -59,6 +59,11 @@ body {
   padding: var(--padding);
 }
 
+.card-info.title:hover {
+    cursor: pointer;
+    background-color: hsl(235, 45%, 61%);
+}
+
 img[src$=".svg"] {
   margin-right: 15px;
 }
