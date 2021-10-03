@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
 :root {
+  --primary-background-color: hsl(235, 46%, 20%);
   --main-background-color: hsl(226, 43%, 10%);
+  --profile-color: hsl(246, 80%, 60%);
   --work-color: hsl(15, 100%, 70%);
   --play-color: hsl(195, 74%, 62%);
   --study-color: hsl(348, 100%, 68%);
@@ -9,8 +11,10 @@
   --social-color: hsl(264, 64%, 52%);
   --selfcare-color: hsl(43, 84%, 65%);
   --text-color: white;
+  --radius: 15px;
 }
 
+/* Global Styling */
 body {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
@@ -18,19 +22,98 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
   width: 70%;
-  border: 1px solid red;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 250px);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.3rem;
 }
 
+.profile-card {
+  grid-row: 1 / 3;
+}
+
+.top-portion {
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.card-info {
+  position: relative;
+  background-color: var(--primary-background-color);
+  border-radius: var(--radius);
+  margin-top: -10px;
+  padding: 0.7rem;
+}
+
+img[src$=".svg"] {
+  margin-right: 15px;
+}
+
 div[class$="-card"] {
-  border: 4px solid yellow;
+  /* border: 1px solid yellow; */
+}
+
+/* Profile */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile-card .top-portion {
+  height: 80%;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-info {
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.profile.top-portion {
+  background-color: var(--profile-color);
+  border-radius: var(--radius);
+}
+
+.profile-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.work-card .top-portion {
+  background-color: var(--work-color);
+}
+
+.play-card .top-portion {
+  background-color: var(--play-color);
+}
+
+.study-card .top-portion {
+  background-color: var(--study-color);
+}
+
+.exercise-card .top-portion {
+  background-color: var(--exercise-color);
+}
+
+.social-card .top-portion {
+  background-color: var(--social-color);
+}
+
+.self-care-card .top-portion {
+  background-color: var(--selfcare-color);
 }
